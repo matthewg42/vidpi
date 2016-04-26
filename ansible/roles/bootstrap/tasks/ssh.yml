@@ -1,0 +1,14 @@
+---
+
+- name: Ensuring that pi a ssh key
+  user: name=pi generate_ssh_key=yes
+
+- name: Add authorized key for PH developers
+  authorized_key: user=root key="{{ item }}" state=present
+  with_file:
+  - mouse_id_rsa.pub
+
+- name: Ensure sshd listen to port 22
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^Port" line="Port 22" state=present
+  notify: Restart sshd
+

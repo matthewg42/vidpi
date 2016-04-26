@@ -1,0 +1,6 @@
+[jessielite-device]
+raspberrypi
+
+[jessielite:children]
+jessielite-device
+

@@ -1,0 +1,8 @@
+---
+
+- name: Copy resize script to pi /tmp dir
+  copy: src=expand_pi_root_fs dest=/tmp/expand_pi_root_fs mode=0755
+
+- name: Execute dest=/tmp/expand_pi_root_fs
+  shell: sudo /tmp/expand_pi_root_fs
+  notify: Reboot pi

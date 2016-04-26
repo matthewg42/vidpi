@@ -1,0 +1,14 @@
+---
+
+- name: set pi user credentials
+  user: name=pi state=present password={{password}} shell=/bin/bash
+
+- name: Prevent raspi-config running on first login
+  file: path=/etc/profile.d/raspi-config.sh state=absent
+
+- name: Copy vimrc to pi user
+  copy: src=vimrc dest=/home/pi/.vimrc mode=0644
+
+- name: Copy bashrc to pi user
+  copy: src=bashrc dest=/home/pi/.bashrc mode=0644
+

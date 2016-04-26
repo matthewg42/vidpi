@@ -1,0 +1,8 @@
+.*.swp
+*.pyc
+*~
+t.py
+doc/share/.dropbox
+*conflicted copy*
+extern
+media
