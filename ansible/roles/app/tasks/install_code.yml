@@ -3,10 +3,6 @@
 - name: Copy gpio test code
   copy: src=../../../../src/gpio.py dest=/home/pi/gpio.py mode=0755
 
-- name: Checkout looper
-  shell: git clone https://github.com/adafruit/pi_video_looper.git
-
-- name: Install looper
-  shell: sudo ./install.sh chdir=/home/pi/pi_video_looper
-  notify: Reboot pi
+- name: Copy gpio test code
+  copy: src=../../../../src/gpio.py dest=/home/pi/gpio.py mode=0755
 
