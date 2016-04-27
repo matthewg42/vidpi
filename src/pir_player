@@ -1,0 +1,9 @@
+#!/bin/bash
+
+declare -a vids=(?.mp4)
+echo "videos: ${vids[@]}"
+while ./pir_wait; do 
+    random_video="${vids[$(($RANDOM % ${#vids[@]}))]}"
+    omxplayer -w --layer 2 "$random_video"
+done
+

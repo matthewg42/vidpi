@@ -1,9 +1,8 @@
 ---
 
+- include: example_media.yml
 - include: packages.yml
-- include: hosts.yml
 - include: user_config.yml
 - include: install_code.yml
 - include: ssh.yml
-- include: resize_root_fs.yml
 

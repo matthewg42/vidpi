@@ -10,6 +10,8 @@
     - python-pip
     - git
     - vim
+    - omxplayer
+    - fbi
 
 - name: Use pip to install things 
   shell: sudo pip -q install RPi.GPIO

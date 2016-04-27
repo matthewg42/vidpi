@@ -9,3 +9,4 @@
 - name: Install looper
   shell: sudo ./install.sh chdir=/home/pi/pi_video_looper
   notify: Reboot pi
+

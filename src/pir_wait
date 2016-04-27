@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+import RPi.GPIO as GPIO
+import time
+import logging
+
+log = logging
+log.basicConfig(format='%(asctime)-15s %(message)s', level=logging.INFO)
+
+GPIO.setmode(GPIO.BCM)
+PIR_PIN = 4
+GPIO.setup(PIR_PIN, GPIO.IN)
+started = None
+
+if GPIO.input(PIR_PIN):
+    started = time.time()
+    log.info('started, already detected, waiting for that to finish...')
+else:
+    log.info('started')
+
+try:
+    log.debug('started, waiting for PIR pin to go high')
+    while True:
+        if GPIO.input(PIR_PIN):
+            if started is None:
+                started = time.time()
+                log.info('motion detected')
+                exit(0)
+            else:
+                log.debug('motion contination')
+        else:
+            if started is not None:
+                log.info('motion ended, duration was %.1f' % (time.time() - started))
+                started = None
+            else:
+                log.debug('motion not detected')
+        time.sleep(0.1)
+except KeyboardInterrupt:
+    print " Quit"
+    GPIO.cleanup()
+

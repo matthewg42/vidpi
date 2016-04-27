@@ -1,0 +1,6 @@
+[vid-device]
+vidpi
+
+[vid:children]
+vid-device
+

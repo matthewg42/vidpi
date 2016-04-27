@@ -5,4 +5,3 @@
 
 - name: Execute dest=/tmp/expand_pi_root_fs
   shell: sudo /tmp/expand_pi_root_fs
-  notify: Reboot pi

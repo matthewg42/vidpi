@@ -1,0 +1,8 @@
+---
+
+- name: Copy vimrc to pi user
+  copy: src=../../../../media/2.mp4 dest=/home/pi/2.mp4 mode=0644
+
+- name: Copy vimrc to pi user
+  copy: src=../../../../media/blank.mp4 dest=/home/pi/blank.mp4 mode=0644
+

@@ -1,5 +1,8 @@
-bootstrap :
-	ansible-playbook -i inventory/jessielite --sudo --user pi bootstrap.yml --ask-pass
+expand :
+	ansible-playbook -i inventory/jessielite --sudo --user pi expand.yml --ask-pass
+
+app :
+	ansible-playbook -i inventory/vid --sudo --user pi app.yml --ask-pass
 
 clean: 
 	sed -i -e '/raspberry/ d' -e '/vidpi/ d' ~/.ssh/known_hosts
