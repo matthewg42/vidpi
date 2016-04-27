@@ -1,0 +1,11 @@
+Gap when playing videos end to end  :(
+
+--layer option lets mutliple videos play with one being visible...  can use this for blank loop...
+
+Loop option fails.
+
+Building more recent omxplayer:
+
+install packages: 
+
+libavcodec-dev libavformat-dev ca-certificates git-core subversion binutils libva1 libpcre3-dev libidn11-dev libboost1.50-dev libfreetype6-dev libusb-1.0-0-dev libdbus-1-dev libssl-dev libssh-dev libsmbclient-dev gcc-4.7 g++-4.7 sed pkg-config
