@@ -1,8 +1,18 @@
 ---
 
-- name: Copy vimrc to pi user
-  copy: src=../../../../media/2.mp4 dest=/home/pi/2.mp4 mode=0644
+- name: create directory for example media files to go in
+  file: path=/home/pi/media state=directory mode=0755 owner=pi
+
+- name: Copy example media to pi
+  copy: src={{item}} dest=/home/pi/media/ mode=0644 owner=pi
+  with_items:
+    - ../../../../media/1.mp4
+    - ../../../../media/2.mp4
+    - ../../../../media/3.mp4
+    - ../../../../media/4.mp4
+    - ../../../../media/blank.mp4
+    - ../../../../media/blank.jpg
 
 - name: Copy vimrc to pi user
-  copy: src=../../../../media/blank.mp4 dest=/home/pi/blank.mp4 mode=0644
+  copy: src=../../../../media/blank.mp4 dest=/home/pi/blank.mp4 mode=0644 owner=pi
 
