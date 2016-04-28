@@ -2,6 +2,7 @@ expand :
 	ansible-playbook -i inventory/jessielite --sudo --user pi expand.yml
 
 app :
+	ssh pi@vidpi echo known host added
 	ansible-playbook -i inventory/vid --sudo --user pi app.yml
 
 clean: 

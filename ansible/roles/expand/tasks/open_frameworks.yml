@@ -1,0 +1,5 @@
+---
+
+- name: Give memory to GPU
+  lineinfile: dest=/boot/config.txt line="gpu_mem=64" state=present
+

@@ -2,5 +2,6 @@
 
 - include: hosts.yml
 - include: user.yml
+- include: open_frameworks.yml
 - include: resize_root_fs.yml
 

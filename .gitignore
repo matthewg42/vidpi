@@ -3,6 +3,7 @@
 *~
 t.py
 doc/share/.dropbox
+ansible/*.retry
 *conflicted copy*
 extern
 media

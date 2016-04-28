@@ -4,5 +4,6 @@
 - include: packages.yml
 - include: user_config.yml
 - include: install_code.yml
+- include: open_frameworks.yml
 - include: ssh.yml
 
