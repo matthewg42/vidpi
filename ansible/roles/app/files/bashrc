@@ -112,7 +112,7 @@ if ! shopt -oq posix; then
 fi
 
 if [ "$TERM" = "vt102" ]; then
-	export LINES=52 ; export COLUMNS=171
+	export LINES=52 ; export COLUMNS=179
 	stty columns $COLUMNS rows $LINES
     export TERM=xterm
 fi
