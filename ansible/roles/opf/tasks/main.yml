@@ -1,0 +1,36 @@
+---
+
+- name: Copy openFrameworks tarball
+  copy: src=of_v0.9.3_linuxarmv6l_release.tar.gz dest=/home/pi/ mode=0644 owner=pi group=pi
+
+- name: make dir for openFrameworks
+  file: path=/home/pi/openFrameworks state=directory mode=0755 owner=pi group=pi
+
+- name: untar openframeworks
+  shell: sudo -u pi tar xfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+
+- name: patch deps script
+  shell: sudo -u pi sed -i~ 's/apt-get install/ apt-get install -y/g' /home/pi/openFrameworks/scripts/linux/debian/install_dependencies.sh
+
+- name: install deps
+  shell: sudo /home/pi/openFrameworks/scripts/linux/debian/install_dependencies.sh
+
+- name: patch codecs script
+  shell: sudo -u pi sed -i~ 's/apt-get install/ apt-get install -y/g' /home/pi/openFrameworks/scripts/linux/debian/install_codecs.sh
+
+- name: install codecs
+  shell: sudo /home/pi/openFrameworks/scripts/linux/debian/install_codecs.sh
+
+- name: fix permissions
+  shell: sudo chown -R pi:pi /home/pi/openFrameworks
+
+- name: build
+  environment:
+    MAKEFLAGS: "-j4" 
+    PLATFORM_ARCH: "armv7l" 
+    # PLATFORM_VARIANT: "raspberry2"
+  shell: sudo -u pi make -j 3 Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
+
+- name: fix permissions
+  shell: sudo chown -R pi:pi /home/pi/openFrameworks
+

@@ -1,0 +1,5 @@
+---
+
+- name: disable under-voltage / over temp warning overlays on HDMI display
+  lineinfile: dest=/boot/config.txt line="avoid_warnings=1" state=present
+

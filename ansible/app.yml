@@ -2,3 +2,5 @@
 - hosts: vid
   roles:
     - app
+    - opf
+    - ofx

@@ -13,6 +13,7 @@
     - omxplayer
     - fbi
     - wget
+    - wiringpi
 
 - name: Use pip to install things 
   shell: sudo pip -q install RPi.GPIO

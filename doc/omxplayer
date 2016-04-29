@@ -6,6 +6,8 @@ Loop option fails.
 
 Building more recent omxplayer:
 
-install packages: 
+git clone https://github.com/popcornmix/omxplayer.git
+cd omxplayer
+./prepare-native-raspbian.sh
+sudo apt-get install ca-certificates git-core subversion binutils libva1 libpcre3-dev libidn11-dev libboost1.50-dev libfreetype6-dev libusb-1.0-0-dev libdbus-1-dev libssl-dev libssh-dev libsmbclient-dev gcc-4.7 g++-4.7 sed pkg-config
 
-libavcodec-dev libavformat-dev ca-certificates git-core subversion binutils libva1 libpcre3-dev libidn11-dev libboost1.50-dev libfreetype6-dev libusb-1.0-0-dev libdbus-1-dev libssl-dev libssh-dev libsmbclient-dev gcc-4.7 g++-4.7 sed pkg-config

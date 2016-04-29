@@ -6,10 +6,9 @@
 - name: Copy example media to pi
   copy: src={{item}} dest=/home/pi/media/ mode=0644 owner=pi
   with_items:
-    - ../../../../media/1.mp4
-    - ../../../../media/2.mp4
-    - ../../../../media/3.mp4
-    - ../../../../media/4.mp4
-    - ../../../../media/blank.mp4
-    - ../../../../media/blank.jpg
+    - ../../../../media/24fps/0.mp4
+    - ../../../../media/24fps/1.mp4
+    - ../../../../media/24fps/2.mp4
+    - ../../../../media/24fps/3.mp4
+    - ../../../../media/24fps/4.mp4
 
