@@ -1,0 +1,12 @@
+[Unit]
+Description=Vidpi Media Player
+
+[Service]
+ExecStart=/usr/local/bin/vidpi-player
+RestartSec=3s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+

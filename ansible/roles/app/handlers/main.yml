@@ -1,7 +1,0 @@
----
-
-- name: Restart sshd
-  service: name=ssh state=restarted
-
-- name: Reboot pi
-  command: sudo reboot

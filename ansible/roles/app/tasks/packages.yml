@@ -6,15 +6,9 @@
 - name: Install base packages selection
   apt: pkg={{item}} state=installed
   with_items:
-    - tmux
-    - python-pip
-    - git
-    - vim
-    - omxplayer
-    - fbi
-    - wget
     - wiringpi
-
-- name: Use pip to install things 
-  shell: sudo pip -q install RPi.GPIO
+    - libfontconfig
+    - libcairo2
+    - libfreeimage3
+    - libboost-filesystem1.55.0
 

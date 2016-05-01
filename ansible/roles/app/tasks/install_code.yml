@@ -3,13 +3,12 @@
 - name: make usb mount dir
   file: path=/mnt/usb state=directory mode=0755 owner=root
 
-- name: create directory for code to go in
-  file: path=/home/pi/bin state=directory mode=0755 owner=pi
+- name: Copy vidpi-player binary 
+  copy: src=vidpi-player dest=/usr/local/bin/ mode=0755 owner=root
 
-- name: Copy code files into bin dir
-  copy: src={{item}} dest=/home/pi/bin/ mode=0755 owner=pi
-  with_items:
-    - ../../../../src/gpio.py
-    - ../../../../src/pir_wait
-    - ../../../../src/pir_player
+- name: install systemd service file
+  copy: src=vidpi-player.service dest=/etc/systemd/system mode=644
+
+- name: enable systemd service
+  shell: systemctl enable vidpi-player.service
 

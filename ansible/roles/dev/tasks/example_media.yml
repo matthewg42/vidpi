@@ -1,0 +1,14 @@
+---
+
+- name: create directory for example media files to go in
+  file: path=/home/pi/media state=directory mode=0755 owner=pi
+
+- name: Copy example media to pi
+  copy: src={{item}} dest=/home/pi/media/ mode=0644 owner=pi
+  with_items:
+    - ../../../../media/24fps/blank.mp4
+    - ../../../../media/24fps/1.mp4
+    - ../../../../media/24fps/2.mp4
+    - ../../../../media/24fps/3.mp4
+    - ../../../../media/24fps/4.mp4
+
