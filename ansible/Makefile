@@ -25,3 +25,7 @@ opf:
 ofx:
 	ansible-playbook -i inventory/vid --sudo --user pi ofx.yml
 
+# is also part of dev.... but this way we can do it separately to retry
+vidpi-player:
+	ansible-playbook -i inventory/vid --sudo --user pi vidpi-player.yml
+

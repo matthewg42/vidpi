@@ -9,4 +9,6 @@
 - name: set HDMI mode to 720p @60Hz
   lineinfile: dest=/boot/config.txt line="hdmi_mode=4" state=present
 
+- name: disable visible under-current warning
+  lineinfile: dest=/boot/config.txt line="avoid_warnings=1" state=present
 

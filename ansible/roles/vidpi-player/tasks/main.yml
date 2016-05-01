@@ -1,0 +1,10 @@
+---
+
+- name: Copy vidpi-player source
+  synchronize: src=../../../../src/vidpi-player/ dest=/home/pi/openFrameworks/addons/ofxOMXPlayer/vidpi-player/ recursive=yes
+
+- name: make a symlink for convenience
+  shell: sudo -u pi ln -s /home/pi/openFrameworks/addons/ofxOMXPlayer/vidpi-player /home/pi/vidpi-player
+
+- name: build vidpi-player
+  shell: sudo -u pi make -j 4 -C /home/pi/vidpi-player

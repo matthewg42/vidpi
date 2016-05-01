@@ -1,7 +1,4 @@
 ---
 - hosts: vid
   roles:
-    - dev
-    - opf
-    - ofx
     - vidpi-player
