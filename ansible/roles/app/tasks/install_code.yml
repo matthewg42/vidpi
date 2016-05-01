@@ -1,5 +1,8 @@
 ---
 
+- name: make usb mount dir
+  file: path=/mnt/usb state=directory mode=0755 owner=root
+
 - name: create directory for code to go in
   file: path=/home/pi/bin state=directory mode=0755 owner=pi
 

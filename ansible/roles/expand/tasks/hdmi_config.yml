@@ -1,0 +1,12 @@
+---
+
+- name: disable overscan
+  lineinfile: dest=/boot/config.txt line="disable_overscan=1" state=present
+
+- name: set HDMI group
+  lineinfile: dest=/boot/config.txt line="hdmi_group=1" state=present
+
+- name: set HDMI mode to 720p @60Hz
+  lineinfile: dest=/boot/config.txt line="hdmi_mode=4" state=present
+
+

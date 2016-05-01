@@ -1,7 +1,6 @@
 +   disable screen blanking
-+   hotplug readonly USB flah device
-+   select files from device
-+   parse ini file
-+   image in background with FBI, video on top
-+   video in background, FBI on top
++   hotplug readonly USB flash device [done]
+    -   on first running, make sure we mount a drive which is plugged in by not currntly mounted.
 +   systemctl job for pir detection looper
++   make sure the ini file is usable when created with dos line endings - and MAC!
++   ansible app vs dev targets (don't need to build opanFrameworks and such to install... just install deps and binary

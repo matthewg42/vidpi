@@ -3,6 +3,7 @@
 - include: hosts.yml
 - include: user.yml
 - include: pi3.yml
+- include: hdmi_config.yml
 - include: open_frameworks.yml
 - include: resize_root_fs.yml
 
