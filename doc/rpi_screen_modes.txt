@@ -1,0 +1,19 @@
+In config.txt there are two values: hdmigroup and htmimode.
+
+Here are some common combinations and what they mean:
+
+group	mode	screen config
+1	1	VGA (640x480)
+1	4	720p
+1	5	1080i
+1	6	480i
+1	16	1080p
+1	5	1080i
+2	8	800x600 60 Hz
+2	16	1024x768 60 Hz
+2	18	1024x768 75 Hz
+
+Full listing here:
+
+https://www.raspberrypi.org/documentation/configuration/config-txt.md
+
