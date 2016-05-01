@@ -4,3 +4,4 @@
 +   systemctl job for pir detection looper
 +   make sure the ini file is usable when created with dos line endings - and MAC!
 +   ansible app vs dev targets (don't need to build opanFrameworks and such to install... just install deps and binary
++   make sure DOS / MAC line endings work for ini file
