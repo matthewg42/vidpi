@@ -5,3 +5,5 @@
 +   make sure the ini file is usable when created with dos line endings [done] 
     - and stupid apple \r only files!
 +   ansible app vs dev targets (don't need to build opanFrameworks and such to install... just install deps and binary [done]
++   BUG: does not detect removed USB key while video playing - only after new vido starts playing.  Includes infinity when blank is played without PIR detection.
++   When we have a missing blank file, display as text.  Also other errors.

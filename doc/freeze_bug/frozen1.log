@@ -1,0 +1,6 @@
+ofApp::playRandomMovie playing /mnt/usb/cl-350.mp4
+[ error ] COMXAudioCodecOMX::GetChannelMap - FFmpeg reported 2 channels, but the layout contains 0 ignoring
+ofApp::fakeGpioCheck TRIGGER
+ofApp::playRandomMovie playing /mnt/usb/cl-270.mp4
+[ error ] OMX_ERRORTYPE COMXCoreComponent::WaitForCommand(OMX_COMMANDTYPE, OMX_U32, long int): OMX.broadcom.audio_decode OMX_CommandStateSet
+
