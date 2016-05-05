@@ -124,3 +124,4 @@ pwait ()
     done
 }
 
+export EDITOR=vim
