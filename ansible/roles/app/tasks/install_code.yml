@@ -6,9 +6,18 @@
 - name: Copy vidpi-player binary 
   copy: src=vidpi-player dest=/usr/local/bin/ mode=0755 owner=root
 
-- name: install systemd service file
+- name: install vidpi-player service file
   copy: src=vidpi-player.service dest=/etc/systemd/system mode=644
 
-- name: enable systemd service
+- name: enable vidpi-player service
   shell: systemctl enable vidpi-player.service
+
+- name: Copy vidpi-watchdog script 
+  copy: src=vidpi-watchdog dest=/usr/local/bin/ mode=0755 owner=root
+
+- name: install vidpi-watchdog service file
+  copy: src=vidpi-watchdog.service dest=/etc/systemd/system mode=644
+
+- name: enable vidpi-watchdog service
+  shell: systemctl enable vidpi-watchdog.service
 

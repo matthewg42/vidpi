@@ -3,7 +3,7 @@ Description=Vidpi Media Player
 
 [Service]
 ExecStart=/usr/local/bin/vidpi-player
-RestartSec=3s
+RestartSec=1s
 Restart=always
 
 [Install]

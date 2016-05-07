@@ -1,0 +1,20 @@
+#!/bin/bash
+
+watchdog_path="/run/vidpi-player.watch"
+player_binary="vidpi-player"
+max_age=3
+
+while true; do
+	player_pids=$(pgrep $player_binary)
+	if [ $? -eq 0 ]; then
+		last_update=$(stat -c "%Y" "$watchdog_path")
+		now=$(printf "%(%s)T\n")
+		diff=$(($now - $last_update))
+		if [ $diff -gt $max_age ]; then
+			echo "watchdog out of date - killing pid(s): $player_pids"
+			systemctl restart vidpi-player
+		fi
+	fi
+	sleep 1
+done
+
