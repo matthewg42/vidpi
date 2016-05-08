@@ -3,6 +3,7 @@
 - include: packages.yml
 - include: ssh.yml
 - include: install_code.yml
-- name: reboot to enable service
+- include: journald.yml
+- name: reboot to activate changes
   shell: reboot
 

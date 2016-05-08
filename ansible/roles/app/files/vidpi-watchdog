@@ -6,7 +6,7 @@ max_age=3
 
 while true; do
 	player_pids=$(pgrep $player_binary)
-	if [ $? -eq 0 ]; then
+	if [ $? -eq 0 ] && [ -e "$watchdog_path" ]; then
 		last_update=$(stat -c "%Y" "$watchdog_path")
 		now=$(printf "%(%s)T\n")
 		diff=$(($now - $last_update))
