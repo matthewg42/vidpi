@@ -2,7 +2,6 @@
 - hosts: jessielite
   vars:
     # crypted password, generated on a Linux box using: echo 'import crypt,getpass; print (crypt.crypt(getpass.getpass(), "$6$AC3bdCF7!"))' | python -
-    # - password: '$6$AC3bbCF7!$Pct31fZVh0rr4dGZBPnAZUKgjc0E00MPlO/wuBFtczmHWKS1XsaTctY8HyO14.FrpOtj4v/B1cucemzhhUv19/'
-    - password: ''
+    - password: '$6$AC3bdCF7!$Er05JWD/2VBCg5qwinPWdlWuO9/tSTuKc3fMyQH5mSZ4dYss4JEoodbqiBZ8KGw5./QAp6K1pdcZb.iXuQibp0'
   roles:
     - expand
